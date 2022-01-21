@@ -2,14 +2,16 @@
 //
 
 #include <iostream>
+#include <iostream>
 using namespace std;
 
 
 int main()
 {
-	string adveturesName, YesOrNO, Choice, Weapon, GreatAxe, GoldenSward, MagicalWond, fistsOfFury;
+	string adveturesName, YesOrNO, Choice, Weapon, GreatAxe, GoldenSward, MagicalWond, fistsOfFury, action;
 	int WeaponOfChoice;
-	//bool again = true;// to allow the progrmam to rename the charactor
+	char again = 'n';
+	char loop;
 
 	cout << "-----------------\n";//title
 	cout << "-Adventure-Quest-\n";//title
@@ -18,25 +20,32 @@ int main()
 	cout << "What's your advetures name?\n";//Characters neme being collected
 	cin >> adveturesName;//Charaters name Input
 
-	//cout << "would you like to continue with" << adveturesName << " as your name? y/n";//Asking if the namme they put in is correct
-	//cin >> YesOrNO;//Answer y/n
+	cout << "would you like to continue with" << adveturesName << " as your name? y/n";//Asking if the namme they put in is correct
+	cin >> YesOrNO;//Answer y/n||
 
-	/*while (again);
+	char again = 'n';
+	while (again == 'Y' || again == 'y')
 	{
+		cout << "What's your advetures name?\n";//Characters neme being collected
+		cin >> adveturesName;//Charaters name Input
 
+		cout << "would you like to continue with " << adveturesName << " as your name? y/n";//Asking if the namme they put in is correct
+		cin >> again;//Answer y/n||
 
-		if (YesOrNO == "y" || YesOrNO == "Y")
+		if (again == 'N' || again == 'n')
 		{
-			cout << "lets continue Shall we\n";// continues with the progeamm after the loop
+			cout << "What's your advetures name?\n";//Characters neme being collected
+			cin >> adveturesName;//Charaters name Input
 
 		}
-		else if (YesOrNO == "N" || YesOrNO == "n")
-		{
 
-			return again;
+		else
+		{
+			cout << "thats not a valid input!!";
 		}
+		cout << "\nDo you want to change your characters name again(y/n): ";
+		cin >> again;
 	}
-	*/
 
 	cout << "You have made it " << adveturesName << " lets start the quest shall we.\n";//Narrative
 	cout << "You hesetently agree but its only the beging.";//Narrative
@@ -48,7 +57,7 @@ int main()
 
 	cout << "Now chose between all 3 of theses fine weapons (GreatAxe[1], GoldenSward[2], MagicalWond[3] ).\n";
 	cin >> WeaponOfChoice;//WeaponOfChoice input
-
+	while (loop)
 	if (WeaponOfChoice == 1)//loop for each choice(GreatAxe)
 	{
 		cout << "You have chosen the GreatAxe what a fine choice.\n";
@@ -67,8 +76,8 @@ int main()
 	}
 	else
 	{
-		cout << "i see you dont need a weapon, very well so be it\n";
-		Weapon = fistsOfFury;
+		cout << "i see your being stubben but you must chose a weopon \n";
+
 	}
 
 	cout << "let us continue, this way!!";
