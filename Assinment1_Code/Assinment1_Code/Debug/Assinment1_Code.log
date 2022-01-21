@@ -1,2 +1,2 @@
 ﻿  Assinment1_Code.cpp
-D:\Coding\Coding\Robs_Assinment1\Assinment1_Code\Assinment1_Code\Assinment1_Code.cpp(90,26): error C2059: syntax error: ')'
+D:\Coding\Coding\Robs_Assinment1\Assinment1_Code\Assinment1_Code\Assinment1_Code.cpp(10,2): error C3861: 'main': identifier not found
