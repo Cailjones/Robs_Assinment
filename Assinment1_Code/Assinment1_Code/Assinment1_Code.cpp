@@ -7,15 +7,16 @@ using namespace std;
 
 void GameReset()
 {
-	main();
+
 }
 
 int main()
 {
 	string adveturesName, YesOrNO, Choice, Weapon, GreatAxe, GoldenSward, MagicalWond, fistsOfFury, action;//strings
 	//string Weapons[3]{ "GreateAxe", "GoldenSward", "MagicalWond" };
-	int WeaponOfChoice;// intragers
-	char again;//stores the charrcter for the while loop
+	int WeaponOfChoice, path;// intragers
+	char again{1}, paths{3};//stores the charrcter for the while loop
+	
 
 	cout << "-----------------\n";//title
 	cout << "-Adventure-Quest-\n";//title
@@ -48,8 +49,7 @@ int main()
 		{
 			cout << "That wasnt a valid input try again\n";
 			cout << "would you like to continue with " << adveturesName << " as your name? y/n\n";//Asking if the namme they put in is correct
-			cin >> again;//Answer y/n||Y\N
-
+		
 		}
 		
 	}
@@ -62,14 +62,6 @@ int main()
 	cout << adveturesName << " Your awake, now lets get you some gear.\n";//Narrative
 	cout << adveturesName << " Your lucky we haev a fine choice of weapons for you!\n";
 
-	/*do
-	{
-		while(Weapons)
-		{
-
-		}
-	}
-	*/
 	while (true)
 	{
 		cout << "Now chose  between all 3 of theses fine weapons (GreatAxe[1], GoldenSward[2], MagicalWond[3] ).\n";
@@ -100,10 +92,27 @@ int main()
 			cout << "i see your being stubben but you must chose a weopon \n";
 		}
 	}
-	
-	cout << "let us continue, this way!!";
 
-    GameReset();
+	cout << adveturesName << " With your " << WeaponOfChoice << "lets go shall we\n";
+
+	while (paths)
+	{
+		cout << "You leave the town and now you are on your way what path would you like to take?\nthe Forest[1], ThePath[]";
+		cin >> path;// input the path
+
+		if (path == 1)
+		{
+
+		}
+		else if (path == 2)
+		{
+
+		}
+		else
+		{
+			cout << "Thats not a valid choice";
+		}
+	}
 }
 
 
