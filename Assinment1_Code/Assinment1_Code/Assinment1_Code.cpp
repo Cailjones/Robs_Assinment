@@ -12,10 +12,9 @@ void GameReset()
 
 int main()
 {
-	string adveturesName, YesOrNO, Choice, Weapon, GreatAxe, GoldenSward, MagicalWond, fistsOfFury, action;//strings
-	//string Weapons[3]{ "GreateAxe", "GoldenSward", "MagicalWond" };
-	int WeaponOfChoice, path;// intragers
-	char again{1}, paths{3};//stores the charrcter for the while loop
+	string adveturesName, YesOrNO, Choice, Weapon, GreatAxe, GoldenSward, MagicalWond, fistsOfFury, action, TheCliffs, pathChosen, TheForest;//strings for all the code
+	int WeaponOfChoice, path, again, investegate;// intragers for the code
+	bool intEnterd = false;// if the answer isnt a int then the bool will detect 
 	
 
 	cout << "-----------------\n";//title
@@ -27,31 +26,28 @@ int main()
 
 	while (true)
 	{
-		cout << "would you like to continue with " << adveturesName << " as your name? y/n\n";//Asking if the namme they put in is correct
+		cout << "would you like to continue with " << adveturesName << " as your name? no[1], yes[2] \n";//Asking if the namme they put in is correct
 		cin >> again;//Answer y/n||Y\N
 
-		if(again == 'N' || again == 'n')
+		if (again == 1)
 		{
 			cout << "What's your advetures name?\n";//Characters neme being collected
 			cin >> adveturesName;//Charaters name Input
 
-			cout << "would you like to continue with " << adveturesName << " as your name? y/n";//Asking if the namme they put in is correct
-			cin >> again;//Answer y/n||
-			break;
 		}
-		else if (again == 'Y' || again == 'y')
+		else if (again == 2)
 		{
 			cout << "Lets continue shall we";
 			break;
 		}
-
-		else(again);
+		else if (again == !intEnterd);
 		{
 			cout << "That wasnt a valid input try again\n";
-			cout << "would you like to continue with " << adveturesName << " as your name? y/n\n";//Asking if the namme they put in is correct
-		
 		}
-		
+		while(again)
+		{
+			cout << "That wasnt a valid input try again\n";
+		}
 	}
 
 	cout << "You have made it " << adveturesName << " lets start the quest shall we.\n";//Narrative
@@ -87,7 +83,7 @@ int main()
 			Weapon = MagicalWond;
 			break;
 		}
-		else(WeaponOfChoice);//if the statment is incorrect 
+		else(WeaponOfChoice = intEnterd);//if the statment is incorrect 
 		{
 			cout << "i see your being stubben but you must chose a weopon \n";
 		}
@@ -95,24 +91,63 @@ int main()
 
 	cout << adveturesName << " With your " << WeaponOfChoice << "lets go shall we\n";
 
-	while (paths)
+	while (true)
 	{
-		cout << "You leave the town and now you are on your way what path would you like to take?\nthe Forest[1], ThePath[]";
+		cout << "You leave the town and now you are on your way what path would you like to take?\nthe Forest[1], The Cliffs[2] ";
 		cin >> path;// input the path
 
-		if (path == 1)
+		if (path == 1)// if the input for path is 1
+		{
+			cout << "the Forest you have chosen ";// contiues the story
+			pathChosen = TheForest;
+			break;
+		}
+		else if (path == 2)// if the input for path is 2
+		{
+			cout << "The Cliffs you have chosen ";// contiues the story
+			pathChosen = TheCliffs;
+			break;
+		}
+		else(path = intEnterd);//any other input
 		{
 
-		}
-		else if (path == 2)
-		{
+		  cout << "Thats not a valid choice";
 
-		}
-		else
-		{
-			cout << "Thats not a valid choice";
 		}
 	}
+
+	cout << "You walk with your weapon at hand stumbling through the" << pathChosen << "fers and ready to fight\n";
+	
+		while (true)
+		{
+			cout << "theres a noise from the bushes do you investegate? no[1], yes[2]";
+			cin >> investegate;
+
+			if (investegate == 1)//loop for each investegate no
+			{
+				cout << "You run, Luckily a bear jups from the bushes and you draw your " << Weapon ;
+				
+				break;
+
+
+			}
+			else if (investegate == 2)//loop for each investegate yes
+			{
+				cout << "You have chosen the GoldenSward an adventure of fine tast i see.\n";
+				Weapon = GoldenSward;
+				break;
+			}
+			else if(investegate = intEnterd);//if the statment is incorrect 
+			{
+				cout << "i see your being stubben but you must chose a weopon \n";
+			}
+			else
+			{
+
+			}
+		
+			
+		}
 }
 
 
