@@ -5,17 +5,13 @@
 
 using namespace std;
 
-void GameReset()
-{
-
-}
-
 int main()
 {
-	string adveturesName, YesOrNO, Choice, Weapon, GreatAxe, GoldenSward, MagicalWond, fistsOfFury, action, TheCliffs, pathChosen, TheForest;//strings for all the code
+	string adveturesName, YesOrNO, Choice, Weapon, GreatAxe, GoldenSward, MagicalWond, fistsOfFury, action, TheCliffs, pathChosen, TheForest, Restart, correct;
+	string incorrect;//strings for all the code
 	int WeaponOfChoice, path, again, investegate;// intragers for the code
 	bool intEnterd = false;// if the answer isnt a int then the bool will detect 
-	
+
 
 	cout << "-----------------\n";//title
 	cout << "-Adventure-Quest-\n";//title
@@ -33,18 +29,14 @@ int main()
 		{
 			cout << "What's your advetures name?\n";//Characters neme being collected
 			cin >> adveturesName;//Charaters name Input
-
+			break;
 		}
 		else if (again == 2)
 		{
 			cout << "Lets continue shall we";
 			break;
 		}
-		else if (again == !intEnterd);
-		{
-			cout << "That wasnt a valid input try again\n";
-		}
-		while(again)
+		else(again);
 		{
 			cout << "That wasnt a valid input try again\n";
 		}
@@ -67,8 +59,8 @@ int main()
 		{
 			cout << "You have chosen the GreatAxe what a fine choice.\n";
 			Weapon = GreatAxe;
-            break;
-		
+			break;
+
 
 		}
 		else if (WeaponOfChoice == 2)//loop for each choice(GoldenSward)
@@ -83,7 +75,7 @@ int main()
 			Weapon = MagicalWond;
 			break;
 		}
-		else(WeaponOfChoice = intEnterd);//if the statment is incorrect 
+		else if (WeaponOfChoice)//if the statment is incorrect 
 		{
 			cout << "i see your being stubben but you must chose a weopon \n";
 		}
@@ -111,43 +103,44 @@ int main()
 		else(path = intEnterd);//any other input
 		{
 
-		  cout << "Thats not a valid choice";
+			cout << "Thats not a valid choice";
 
 		}
 	}
 
 	cout << "You walk with your weapon at hand stumbling through the" << pathChosen << "fers and ready to fight\n";
-	
-		while (true)
+
+	while (true)
+	{
+		cout << "theres a noise from the bushes do you investegate? no[1], yes[2]";
+		cin >> investegate;
+
+		if (investegate == 1)//loop for each investegate no
 		{
-			cout << "theres a noise from the bushes do you investegate? no[1], yes[2]";
-			cin >> investegate;
+			cout << "You run, Luckily a bear jups from the bushes and you draw your " << Weapon;
 
-			if (investegate == 1)//loop for each investegate no
-			{
-				cout << "You run, Luckily a bear jups from the bushes and you draw your " << Weapon ;
-				
-				break;
+			break;
 
 
-			}
-			else if (investegate == 2)//loop for each investegate yes
-			{
-				cout << "You have chosen the GoldenSward an adventure of fine tast i see.\n";
-				Weapon = GoldenSward;
-				break;
-			}
-			else if(investegate = intEnterd);//if the statment is incorrect 
-			{
-				cout << "i see your being stubben but you must chose a weopon \n";
-			}
-			else
-			{
-
-			}
-		
-			
 		}
+		else if (investegate == 2)//loop for each investegate yes
+		{
+			cout << "You have chosen the GoldenSward an adventure of fine tast i see.\n";
+			Weapon = GoldenSward;
+			break;
+		}
+		else if (investegate)//if anything but 1/2 is chosen
+		{
+			cout << "Your have input was invilid try again\n";
+		}
+		else(investegate == intEnterd);
+		{
+			cout << "Your have input was invilid try again\n";
+		}
+
+
+	}
+
 }
 
 
